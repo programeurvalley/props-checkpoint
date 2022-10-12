@@ -1,24 +1,17 @@
-import logo from './logo.svg';
 import './App.css';
+import Profile from './profile/profile';
 
 function App() {
+  var fullName = "Bill Gates"
+  var profession = "Computer scientist , Entrepreneurship , Invention"
+  var bio = "Bill Gates is a technologist, business leader, and philanthropist. He grew up in Seattle, Washington, with an amazing and supportive family who encouraged his interest in computers at an early age. He dropped out of college to start Microsoft with his childhood friend Paul Allen."
+
+  function handleName(){
+    alert(`Welcome ${fullName}`)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Profile fullName={fullName} profession={profession} bio={bio} handleName={handleName} />
   );
 }
 
