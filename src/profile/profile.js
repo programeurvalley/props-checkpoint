@@ -1,3 +1,4 @@
+import PropTypes from 'prop-types'
 import Imagechild from './Imagechild'
 import profilePic from './assets/Bill-Gates.jpg'
 
@@ -39,6 +40,19 @@ function Profile(props){
         
     </>
     )
+}
+
+Profile.defaultProps = {
+    fullName: "Hubert Warcisław" ,
+    profession : "IT consultant" ,
+    bio : "Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga aliquam praesentium earum, totam, corrupti assumenda amet obcaecati molestias debitis magnam fugit quasi laudantium laboriosam quia porro alias, accusamus possimus repellat sunt adipisci quas non odit qui veniam. Autem reprehenderit minima necessitatibus consequatur impedit voluptatum laborum vel fugit."
+};
+
+Profile.propTypes = {
+    fullName : PropTypes.string,
+    profession : PropTypes.string,
+    bio : PropTypes.string,
+    handleName : PropTypes.func
 }
 
 export default Profile
